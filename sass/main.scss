@@ -83,10 +83,10 @@ body {
   }
 }
 .call-fixed-btn {
-  position: fixed;
-  bottom: 0;
+  position: fixed; /* faqat fixed */
+  bottom: 24px; /* yaxshi ko‘rinishi uchun */
+  right: 24px;
   background: linear-gradient(240deg, rgb(255, 119, 0), rgb(255, 119, 0));
-  inset: auto 24px 24px auto;
   transition: 250ms ease-in;
   z-index: 100;
   cursor: pointer;
@@ -98,12 +98,13 @@ body {
   border-radius: 32px;
   text-align: center;
   opacity: 1;
-  position: absolute;
+
   border: none;
   outline: none;
   font-family: Arial, Helvetica, sans-serif !important;
   animation: 1.5s ease-in-out 0s infinite normal both running phoneAnime;
 }
+
 @keyframes phoneAnime {
   0% {
     transform: scale(1);
