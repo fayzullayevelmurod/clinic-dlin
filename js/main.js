@@ -7,6 +7,14 @@ const complexCasesSwiper = new Swiper(".complex-cases__swiper", {
     prevEl: ".complex-cases__swiper-prev",
   },
   loop: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1,
+    },
+  },
 });
 
 const ourTeam = new Swiper(".our-team__swiper", {
@@ -18,6 +26,17 @@ const ourTeam = new Swiper(".our-team__swiper", {
     prevEl: ".our-team__swiper-prev",
   },
   loop: true,
+  breakpoints: {
+    992: {
+      slidesPerView: 3,
+    },
+    700: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1,
+    },
+  },
 });
 var arMapMarkers1093686001 = [
   {
@@ -71,5 +90,47 @@ closeCallModal.addEventListener("click", () => {
 callModal.addEventListener("click", (e) => {
   if (!e.target.closest(".content")) {
     callModal.classList.remove("show");
+  }
+});
+const menuBtn = document.querySelector(".media-menu-btn");
+const closeMenuBtn = document.querySelector(".close-menu");
+const menu = document.querySelector(".media-menu");
+menuBtn.addEventListener("click", () => {
+  menu.classList.add("show");
+  document.body.style.overflow = "hidden";
+});
+closeMenuBtn.addEventListener("click", () => {
+  menu.classList.remove("show");
+  document.body.style.overflow = "";
+});
+menu.addEventListener("click", (e) => {
+  if (!e.target.closest(".content")) {
+    menu.classList.remove("show");
+    document.body.style.overflow = "";
+  }
+});
+
+const openModalBtns = document.querySelectorAll(".open-modal-btn");
+const formModal = document.querySelector(".form-modal");
+const closeModalBtn = document.querySelector(".close-modal");
+
+openModalBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    formModal.classList.add("show");
+
+    if (menu.classList.contains("show")) {
+      menu.classList.remove("show");
+      document.body.style.overflow = "";
+    }
+  });
+});
+
+closeModalBtn.addEventListener("click", () => {
+  formModal.classList.remove("show");
+});
+
+formModal.addEventListener("click", (e) => {
+  if (e.target && !e.target.closest(".modal-content")) {
+    formModal.classList.remove("show");
   }
 });

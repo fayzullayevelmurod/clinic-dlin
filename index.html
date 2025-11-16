@@ -39,6 +39,31 @@
         </div>
       </div>
     </header>
+    <button class="media-menu-btn">
+      <svg width="22px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          stroke="#fff" />
+      </svg>
+
+    </button>
+    <div class="media-menu">
+      <div class="content">
+        <button class="close-menu">
+          <svg width="24px" height="20px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+
+        </button>
+        <img src="images/logo.svg" alt="">
+
+        <div>
+          <a class="phone" href="tel:+7(495)4890888">+7 (495) 489-08-88</a>
+          <button class="open-modal-btn">Заказать звонок</button>
+        </div>
+      </div>
+    </div>
 
     <main>
       <!-- hero -->
@@ -48,7 +73,7 @@
             <h1 class="hero__content-title">
               Авторская методика лечения боли в спине и суставах
             </h1>
-            <ul>
+            <ul class="hero__list">
               <li>
                 <img src="images/icons/germany-flag.webp" alt="">
                 <span>
@@ -80,7 +105,7 @@
                   <div class="git-status">Скидка 50%</div>
                 </div>
               </div>
-              <button class="gift-btn">Бесплатный прием врача</a>
+              <button class="gift-btn open-modal-btn">Бесплатный прием врача</a>
             </div>
           </div>
           <div class="hero__img">
@@ -93,6 +118,23 @@
               </p>
               <b>Опыт 22 года</b>
             </div>
+
+            <ul class="hero__list">
+              <li>
+                <img src="images/icons/germany-flag.webp" alt="">
+                <span>
+                  Стажировка по мануальной терапии во всемирно
+                  известной Клинике Шарите (Германия)
+                </span>
+              </li>
+              <li>
+                <img src="images/icons/gracia-logo.webp" alt="">
+                <span>
+                  Победитель премии «Грация» в номинации
+                  «Лучший невролог, мануальный терапевт»
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -431,7 +473,7 @@
                         Мануальный терапевт, врач высшей
                         квалификационной категории
                       </p>
-                      <button class="call-btn">Записаться</button>
+                      <button class="call-btn open-modal-btn">Записаться</button>
                     </div>
                   </div>
                 </div>
@@ -446,7 +488,7 @@
                         Мануальный терапевт, врач высшей
                         квалификационной категории
                       </p>
-                      <button class="call-btn">Записаться</button>
+                      <button class="call-btn open-modal-btn">Записаться</button>
                     </div>
                   </div>
                 </div>
@@ -461,7 +503,7 @@
                         Мануальный терапевт, врач высшей
                         квалификационной категории
                       </p>
-                      <button class="call-btn">Записаться</button>
+                      <button class="call-btn open-modal-btn">Записаться</button>
                     </div>
                   </div>
                 </div>
@@ -476,7 +518,7 @@
                         Мануальный терапевт, врач высшей
                         квалификационной категории
                       </p>
-                      <button class="call-btn">Записаться</button>
+                      <button class="call-btn open-modal-btn">Записаться</button>
                     </div>
                   </div>
                 </div>
@@ -491,7 +533,7 @@
                         Мануальный терапевт, врач высшей
                         квалификационной категории
                       </p>
-                      <button class="call-btn">Записаться</button>
+                      <button class="call-btn open-modal-btn">Записаться</button>
                     </div>
                   </div>
                 </div>
@@ -506,7 +548,7 @@
                         Мануальный терапевт, врач высшей
                         квалификационной категории
                       </p>
-                      <button class="call-btn">Записаться</button>
+                      <button class="call-btn open-modal-btn">Записаться</button>
                     </div>
                   </div>
                 </div>
@@ -534,7 +576,7 @@
                   Включает полную консультацию врача с планом
                   лечения.
                 </p>
-                <button class="tariff-btn">Записаться</button>
+                <button class="tariff-btn open-modal-btn">Записаться</button>
               </div>
             </div>
             <div class="tariff__card">
@@ -551,7 +593,7 @@
                   Включает полную консультацию врача с планом
                   лечения.
                 </p>
-                <button class="tariff-btn">Записаться</button>
+                <button class="tariff-btn open-modal-btn">Записаться</button>
               </div>
             </div>
             <div class="tariff__card">
@@ -567,7 +609,7 @@
                   Включает полную консультацию врача с планом
                   лечения.
                 </p>
-                <button class="tariff-btn">Записаться</button>
+                <button class="tariff-btn open-modal-btn">Записаться</button>
               </div>
             </div>
           </div>
@@ -618,7 +660,7 @@
           <h2 class="title">Записаться на бесплатный прием</h2>
           <p class="sub-title">Проконсультируйтесь с опытным врачом, проведите диагностику,
             получите индивидуальный план лечения.</p>
-          <button class="free-consultation__btn">Заказать звонок</a>
+          <button class="free-consultation__btn open-modal-btn">Заказать звонок</a>
         </div>
       </section>
 
@@ -788,6 +830,36 @@
           Вы даете согласие на <a href="#!">обработку персональных данных</a>, <br> <a href="#!">Сделано в Calltouch</a>
         </span>
       </form>
+    </div>
+  </div>
+
+  <!-- form modal -->
+  <div class="form-modal">
+    <button class="close-modal">
+      <svg width="23px" height="23px" role="presentation" class="t-popup__close-icon" width="23px" height="23px"
+        viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd">
+          <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) "
+            x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+          <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) "
+            x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+        </g>
+      </svg>
+    </button>
+    <div class="modal-content">
+      <img class="logo" src="images/modal-logo.webp" alt="">
+      <div class="content">
+        <h3>Запись на бесплатный прием</h3>
+        <input type="text" placeholder="Ваше имя">
+        <input type="tel" class="phone-mask" placeholder="+7 (000) 000-00-00">
+        <label for="rozi">
+          <input type="checkbox" id="rozi">
+          <span>
+            Я даю согласие на обработку своих персональных данных согласно <a href="#!">Политике конфиденциальности</a>
+          </span>
+        </label>
+        <button>Отправить</button>
+      </div>
     </div>
   </div>
 
