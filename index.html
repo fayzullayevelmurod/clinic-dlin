@@ -39,15 +39,15 @@
         </div>
       </div>
     </header>
-    <button class="media-menu-btn">
+    <!-- <button class="media-menu-btn">
       <svg width="22px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
         stroke="currentColor" class="size-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
           stroke="#fff" />
       </svg>
 
-    </button>
-    <div class="media-menu">
+    </button> -->
+    <!-- <div class="media-menu">
       <div class="content">
         <button class="close-menu">
           <svg width="24px" height="20px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -63,7 +63,7 @@
           <button class="open-modal-btn">Заказать звонок</button>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <main>
       <!-- hero -->
@@ -144,33 +144,109 @@
         <div class="container">
           <h2 class="title">Рассчитайте стоимость за 1 минуту</h2>
           <div class="calculate__price-card">
-            <h3 class="calculate__price-card-title">Что у вас болит?</h3>
-            <div class="choose-boxes">
-              <div class="choose-box">
-                <div class="img-box">
-                  <img src="images/calculate-price-img-1.png" alt="">
+            <div class="progress"></div>
+            <!-- step 1 -->
+            <div class="step step-1">
+              <h3 class="calculate__price-card-title step__title">Что у вас болит?</h3>
+              <!-- step 1 -->
+              <div class="choose-boxes">
+                <div class="choose-box" id="choose-box-1">
+                  <div class="img-box">
+                    <img src="images/calculate-price-img-1.png" alt="">
+                  </div>
+                  <span class="info">Поясница</span>
                 </div>
-                <span class="info">Поясница</span>
-              </div>
-              <div class="choose-box">
-                <div class="img-box">
-                  <img src="images/calculate-price-img-2.png" alt="">
+                <div class="choose-box" id="choose-box-2">
+                  <div class="img-box">
+                    <img src="images/calculate-price-img-2.png" alt="">
+                  </div>
+                  <span class="info">Шея</span>
                 </div>
-                <span class="info">Шея</span>
-              </div>
-              <div class="choose-box">
-                <div class="img-box">
-                  <img src="images/calculate-price-img-3.png" alt="">
+                <div class="choose-box" id="choose-box-3">
+                  <div class="img-box">
+                    <img src="images/calculate-price-img-3.png" alt="">
+                  </div>
+                  <span class="info">Седалищный нерв</span>
                 </div>
-                <span class="info">Седалищный нерв</span>
-              </div>
-              <div class="choose-box">
-                <div class="img-box">
-                  <img src="images/calculate-price-img-4.png" alt="">
+                <div class="choose-box" id="choose-box-4">
+                  <div class="img-box">
+                    <img src="images/calculate-price-img-4.png" alt="">
+                  </div>
+                  <span class="info">Суставы</span>
                 </div>
-                <span class="info">Суставы</span>
               </div>
             </div>
+
+            <!-- step 2 -->
+            <div class="step step-2">
+              <h3 class="step__title">Были ли вы у врача?</h3>
+              <div class="radios">
+                <label for="radio-1">
+                  <input type="radio" id="radio-1" name="step-radio-2">
+                  <span>Да, прошел диагностику</span>
+                </label>
+                <label for="radio-2">
+                  <input type="radio" id="radio-2" name="step-radio-2">
+                  <span>Да, проходил лечение (не помогло)</span>
+                </label>
+                <label for="radio-3">
+                  <input type="radio" id="radio-3" name="step-radio-2">
+                  <span>Нет, не был</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- step 3 -->
+            <div class="step step-3">
+              <h3 class="step__title">Есть ли у вас хронические заболевания спины и суставов?</h3>
+              <div class="radios">
+                <label for="radio-4">
+                  <input type="radio" id="radio-4" name="step-radio-3">
+                  <span>Да</span>
+                </label>
+                <label for="radio-5">
+                  <input type="radio" id="radio-5" name="step-radio-3">
+                  <span>Нет</span>
+                </label>
+                <label for="radio-6">
+                  <input type="radio" id="radio-6" name="step-radio-3">
+                  <span>Затрудняюсь ответить</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- step 4 -->
+            <div class="step step-4">
+              <h3 class="step__title">Когда планируете начать лечение?</h3>
+              <div class="radios">
+                <label for="radio-7">
+                  <input type="radio" id="radio-7" name="step-radio-4">
+                  <span>Как можно быстрее</span>
+                </label>
+                <label for="radio-8">
+                  <input type="radio" id="radio-8" name="step-radio-4">
+                  <span>В ближайшие 2-4 недели</span>
+                </label>
+                <label for="radio-9">
+                  <input type="radio" id="radio-9" name="step-radio-4">
+                  <span>Через месяц и позже</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- step 5 -->
+            <div class="step step-5 last-step">
+              <h3 class="step__title">Оставьте свой номер телефона</h3>
+              <input type="tel" class="phone-mask">
+              <label>
+                <input class="check-input" type="checkbox" placeholder="+7 (000) 000-00-00">
+                <span>
+                  Я даю согласие на обработку своих персональных данных согласно
+                  <a href="#!">Политике конфиденциальности</a>
+                </span>
+              </label>
+            </div>
+            <span class="error-msg">Please fill out all required fields</span>
             <div class="btns">
               <button class="prev">
                 ← Назад
@@ -768,7 +844,7 @@
       </div>
     </footer>
   </div>
-  <button class="call-fixed-btn">
+  <button class="call-fixed-btn open-modal-btn">
     <svg width="32" height="32" viewBox="0 0 32 32">
       <path fill="white" fill-rule="evenodd"
         d="M23.1928046,29.9984659 C22.8359607,29.9984659 17.2785925,30.2931635 9.28989516,22.7134914 C2.86079512,16.6135311 2.07524092,10.0539422 2.00679659,8.80762336 C1.94021893,7.5936684 2.28772944,4.54835611 6.47590001,2.28568846 C6.99483245,2.00530563 8.02367512,1.88114054 8.28936355,2.14689741 C8.40727446,2.26483869 11.9225129,8.05080755 12.0149127,8.24250103 C12.1073125,8.43388332 12.153668,8.62246489 12.153668,8.80731217 C12.153668,9.07151308 11.9654461,9.40199761 11.5886912,9.79845458 C11.2122474,10.1949115 10.8028259,10.5583823 10.3601155,10.8885556 C9.91740519,11.2190402 9.50798368,11.5691297 9.13122877,11.9391355 C8.75478497,12.30883 8.56656308,12.6131745 8.56656308,12.8509243 C8.59207414,13.4680154 9.09762883,15.678403 12.9488666,19.0632244 C16.8007267,22.4489793 18.6561901,23.4027788 18.8344565,23.4687513 C19.013034,23.5347237 19.1614337,23.5673987 19.280278,23.5673987 C19.5182776,23.5673987 19.8222326,23.3794395 20.1921431,23.0028988 C20.5617424,22.6260468 21.8052514,20.9213441 22.2016063,20.5444922 C22.5979611,20.1682626 22.9283606,19.9799922 23.1928046,19.9799922 C23.3776042,19.9799922 23.5658261,20.0260484 23.7571591,20.1184721 C23.9488033,20.2108957 29.7407488,23.6010073 29.8515042,23.7142807 C30.152037,24.0223595 29.9398596,24.9839388 29.7127489,25.5285226 C28.1267072,29.3318954 24.4080025,29.9984659 23.1928046,29.9984659 Z">

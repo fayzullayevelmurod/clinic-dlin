@@ -576,11 +576,22 @@ body {
     background: #eeeeee;
     padding: 35px 45px 55px;
     border: 2px solid #cbcbcb;
-    &-title {
-      font-size: 22px;
-      color: #333333;
-      font-weight: 600;
-      margin-bottom: 12px;
+    position: relative;
+    .progress {
+      position: absolute;
+      top: -2px;
+      left: 0px;
+      height: 5px;
+      background: rgb(255, 68, 91);
+    }
+  }
+  .error-msg {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
+    &.show {
+      display: block;
     }
   }
   .choose-boxes {
@@ -589,6 +600,32 @@ body {
     gap: 16px;
   }
   .choose-box {
+    &.selected {
+      position: relative;
+      &::before {
+        content: "";
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76.887 55.552'%3E%3Cpath fill='%23ffffff' d='M34.373 49.541L76.887 5.889 70.739 0 28.426 43.458 6.078 20.632 0 26.585l22.488 22.972 6.029 5.995-.091-.085.091.085 5.856-6.011z'/%3E%3C/svg%3E");
+        background-color: #00b17d;
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        border-radius: 100%;
+        color: #fff;
+        content: " ";
+        left: -18px;
+        position: absolute;
+        top: -18px;
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        transition: all 0.2s ease-in;
+        width: 56px;
+        height: 56px;
+        will-change: transform;
+      }
+    }
     .info {
       font-size: 15px;
       color: #393939;
@@ -659,6 +696,78 @@ body {
           transform: scale(2.5);
         }
       }
+    }
+  }
+  .step {
+    display: none;
+    animation: fade 0.2s linear;
+    &.show {
+      display: block;
+    }
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    &__title {
+      font-size: 22px;
+      color: #333333;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .radios {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #393939;
+        line-height: 1;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      input {
+        accent-color: green;
+        min-width: 20px;
+        max-width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .last-step {
+    .phone-mask {
+      width: 100%;
+      color: #333333;
+      border: 1px solid #d1c9be;
+      background-color: #f3f6f9;
+      border-radius: 5px;
+      height: 60px;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+    label {
+      color: #393939;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-weight: 300;
+      gap: 10px;
+      a {
+        color: #ff8562;
+      }
+    }
+    .check-input {
+      background: transparent;
+      min-width: 20px;
+      max-width: 20px;
+      height: 20px;
+      accent-color: green;
     }
   }
 }
@@ -1447,9 +1556,6 @@ body {
     display: flex;
     top: 20px;
   }
-  .header__right {
-    padding-right: 70px;
-  }
 }
 
 @media (max-width: 700px) {
@@ -1460,9 +1566,6 @@ body {
   }
   .media-menu-btn {
     top: 10px;
-  }
-  .header__right {
-    padding-right: 64px;
   }
   .hero {
     padding-top: 120px;
@@ -1769,5 +1872,8 @@ body {
   }
   .form-modal .modal-content .logo {
     height: 154px;
+  }
+  .advantages__video {
+    min-width: 100%;
   }
 }
