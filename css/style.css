@@ -1052,7 +1052,7 @@ body.no-scroll {
   max-width: 20px;
   height: 20px;
 }
-.calculate__price .last-step .phone-mask {
+.calculate__price .last-step .form-input {
   width: 100%;
   color: #333333;
   border: 1px solid #d1c9be;
