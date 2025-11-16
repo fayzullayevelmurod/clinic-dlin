@@ -2165,6 +2165,15 @@ body.no-scroll {
   .advantages__video {
     min-width: 100%;
   }
+  .calculate__price .last-step .phone-mask {
+    height: 45px;
+  }
+  .calculate__price .last-step label {
+    align-items: start;
+  }
+  .calculate__price .last-step label input {
+    margin-top: 7px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
